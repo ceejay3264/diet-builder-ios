@@ -10,6 +10,7 @@ import UIKit
 class RecipeNutrientsTableViewCell: UITableViewCell {
     
     static let identifier = "RecipeNutrientsTableViewCell"
+    private var margin = 16.0
     
     private var titleLabel: UILabel = {
         var view = UILabel()
@@ -63,18 +64,17 @@ class RecipeNutrientsTableViewCell: UITableViewCell {
         contentStackView.addArrangedSubview(caloriesLabel)
         contentStackView.addArrangedSubview(proteinLabel)
         
-        
         self.contentView.addSubview(contentStackView)
         
-        contentStackView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 16.0).isActive = true
-        contentStackView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -16.0).isActive = true
-        contentStackView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 16.0).isActive = true
-        contentStackView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -16.0).isActive = true
+        contentStackView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: margin).isActive = true
+        contentStackView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -margin).isActive = true
+        contentStackView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: margin).isActive = true
+        contentStackView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -margin).isActive = true
         
-        self.contentView.topAnchor.constraint(equalTo: contentStackView.topAnchor, constant: -16.0).isActive = true
-        self.contentView.bottomAnchor.constraint(equalTo: contentStackView.bottomAnchor, constant: 16.0).isActive = true
-        self.contentView.leadingAnchor.constraint(equalTo: contentStackView.leadingAnchor, constant: -16.0).isActive = true
-        self.contentView.trailingAnchor.constraint(equalTo: contentStackView.trailingAnchor, constant: 16.0).isActive = true
+        self.contentView.topAnchor.constraint(equalTo: contentStackView.topAnchor, constant: -margin).isActive = true
+        self.contentView.bottomAnchor.constraint(equalTo: contentStackView.bottomAnchor, constant: margin).isActive = true
+        self.contentView.leadingAnchor.constraint(equalTo: contentStackView.leadingAnchor, constant: -margin).isActive = true
+        self.contentView.trailingAnchor.constraint(equalTo: contentStackView.trailingAnchor, constant: margin).isActive = true
     }
        
    required init?(coder: NSCoder) {

@@ -24,7 +24,7 @@ class RecipeNutrientsService {
                 switch resp.result{
                     case .success(let data):
                         if let data = data {
-                            do{
+                            do {
                                 let jsonData = try JSONDecoder().decode([RecipeNutrients].self, from: data)
                                 completion(jsonData)
                             } catch {

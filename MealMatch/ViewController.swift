@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .systemBlue
         view.layer.cornerRadius = 4
         view.layer.masksToBounds = true
-        view.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8);
+        view.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         view.addTarget(self, action: #selector(callRecipeNutrientsSearch), for: .touchUpInside)
         return view
     }()
@@ -42,7 +42,6 @@ class ViewController: UIViewController {
         let view = UITableView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true
-        
         view.register(RecipeNutrientsTableViewCell.self, forCellReuseIdentifier: RecipeNutrientsTableViewCell.identifier)
         return view
     }()
