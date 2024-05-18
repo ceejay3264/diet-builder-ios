@@ -13,7 +13,12 @@ class MealSearchViewModel: NSObject {
     
     func searchForMeals(maxCalories: String, completion: @escaping(Bool) -> Void) {
         
-        RecipeNutrientsService.fetchData(number: 10, maxCalories: maxCalories) { data in
+        RecipeNutrientsService.fetchData(number: 10, maxCalories: maxCalories) { [weak self] data in
+            guard let self = self else {
+                completion(false)
+                return
+            }
+            
             self.data = self.cleanData(data)
             completion(true)
         }
@@ -23,7 +28,7 @@ class MealSearchViewModel: NSObject {
         var cleanData: [RecipeNutrients] = []
         
         for item in data {
-            if let title = item.title, let calories = item.calories, let protein = item.protein {
+            if let _ = item.title, let _ = item.calories, let _ = item.protein {
                 let newItem = item
                 cleanData.append(newItem)
             }

@@ -59,8 +59,10 @@ class ViewController: UIViewController {
         if let calorieLimit = calorieLimitInput.text, !calorieLimit.isEmpty {
             mealSearchViewModel.searchForMeals(maxCalories: calorieLimit) { [weak self] didFetch in
                 if didFetch, let self = self {
-                    self.tableView.reloadData()
-                    print(mealSearchViewModel.data.count)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                        print(self.mealSearchViewModel.data.count)
+                    }
                 }
             }
         }

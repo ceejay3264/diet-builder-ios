@@ -18,8 +18,6 @@
 		0C766FEC2BF3ED68003D46CE /* MealMatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C766FEB2BF3ED68003D46CE /* MealMatchUITestsLaunchTests.swift */; };
 		0C7670012BF3F3D5003D46CE /* RecipeNutrientsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7670002BF3F3D5003D46CE /* RecipeNutrientsService.swift */; };
 		0C7670032BF3F44B003D46CE /* RecipeNutrients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7670022BF3F44B003D46CE /* RecipeNutrients.swift */; };
-		0C7670062BF3F77C003D46CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0C7670052BF3F77C003D46CE /* Alamofire */; };
-		0C7670082BF3F77C003D46CE /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0C7670072BF3F77C003D46CE /* AlamofireDynamic */; };
 		0C76700A2BF400A5003D46CE /* MealSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7670092BF400A5003D46CE /* MealSearchViewModel.swift */; };
 		0C76700C2BF40F22003D46CE /* RecipeNutrientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C76700B2BF40F22003D46CE /* RecipeNutrientsTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -66,8 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C7670062BF3F77C003D46CE /* Alamofire in Frameworks */,
-				0C7670082BF3F77C003D46CE /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,8 +180,6 @@
 			);
 			name = MealMatch;
 			packageProductDependencies = (
-				0C7670052BF3F77C003D46CE /* Alamofire */,
-				0C7670072BF3F77C003D46CE /* AlamofireDynamic */,
 			);
 			productName = MealMatch;
 			productReference = 0C766FC52BF3ED67003D46CE /* MealMatch.app */;
@@ -260,7 +254,6 @@
 			);
 			mainGroup = 0C766FBC2BF3ED67003D46CE;
 			packageReferences = (
-				0C7670042BF3F77C003D46CE /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 0C766FC62BF3ED67003D46CE /* Products */;
 			projectDirPath = "";
@@ -658,30 +651,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		0C7670042BF3F77C003D46CE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0C7670052BF3F77C003D46CE /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0C7670042BF3F77C003D46CE /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		0C7670072BF3F77C003D46CE /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0C7670042BF3F77C003D46CE /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0C766FBD2BF3ED67003D46CE /* Project object */;
 }
